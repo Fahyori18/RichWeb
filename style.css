@@ -1,0 +1,19 @@
+/* Everything in CSS is a box (text, button, div...). The box is composed by the content, the padding, the border and the margin */
+* { 
+    /* Here we are saying that the box should occupy only the space of the content */
+     padding: 0;
+     margin: 0;
+     font-size: 1.5em;
+ }
+ 
+ .box-one {    
+ /* I can add a padding to the content, adding background to the element (and, consequently, more space around it) */
+     padding: 0em;
+     background-color: #EB5757;
+     
+ /* the border goes around the padding */
+     border: 0em solid #27AE60;
+     
+ /* the margin is added to increase the space between two elements as it is outside the border. */
+     margin: 0.5em;
+ }
