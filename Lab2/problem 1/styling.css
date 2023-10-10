@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+header { 
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: auto;
+    color: black;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Class to style all columns */
+.col {
+    flex: 1;
+    box-sizing: border-box;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 960px) {
+    /* Change columns to 2x2 grid when the screen size is less than 960px */
+    .col {
+        flex-basis: 50%; 
+    }
+}
+
+@media (max-width: 640px) {
+    /* Change columns to 4x1 grid when the screen size is less than 640px */
+    .col {
+        flex-basis: 100%; 
+    }
+}
