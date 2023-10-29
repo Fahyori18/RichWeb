@@ -5,7 +5,7 @@ let noteID = 1; //variable to identify each note.
 
 //constructor to make note objects.
 function Note(id, title, content){
-    this.id = id;
+    this.id = id; 
     this.title = title;
     this.content = content;
 }
@@ -16,7 +16,7 @@ function eventListeners(){
     document.addEventListener('DOMContentLoaded', displayNotes);
     document.getElementById('add-note-btn').addEventListener('click', addNewNote);
     document.getElementById('save-note-btn').addEventListener('click', saveNote);
-    document.getElementById('cancel-note-btn').addEventListener('click', addNewNote);
+    document.getElementById('cancel-note-btn').addEventListener('click', cancelNote);
 
     //event listener for the note list which will check if the note is delete or edit button and then call the relevent function. 
     noteListDiv.addEventListener('click', function(e) {
@@ -85,6 +85,8 @@ function saveNote(){
 
 // cancel edting of the note
 function cancelNote(){
+    const noteTitle = document.getElementById('note-title');
+    const noteContent = document.getElementById('note-content');
     noteTitle.value = "";
     noteContent.value = "";
     document.getElementById("save-note-btn").style.display = "none";
