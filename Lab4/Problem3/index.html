@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Note Taking App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Links for fontawesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!--Div container-->
+    <div class = "note">
+      <h2>Note Taking App</h2>
+      <div class = "note-input">
+        <h3>Add A New Note: </h3>
+        <div class = "note-wrapper">
+          <input type = "text" id = "note-title" placeholder="Title">
+          <textarea rows = "5" placeholder="Text... " id = "note-content"></textarea>
+          <input type = "hidden" id="note-id-holder"></p>
+          <!--Drop down menu to select the colour of the note-->
+          <select id="notecolor">
+            <option value="#eee7df">Pearl</option>
+            <option value="#DBCBBE">Wafer</option>
+            <option value="#B0988E">Del Rio</option>
+            <option value="#ABDED7">Aqua</option>
+          </select>
+          <!--Button to add note to a list-->
+          <button type = "button" class = "btn" id = "add-note-btn">
+            <span><i class = "fas fa-plus"></i></span>
+            Add Note
+          </button>
+          <!--Button to confirm any changes to the edited note-->
+          <button type = "button" class = "btn" id = "save-note-btn">
+            <span><i class = "fa fa-bookmark"></i></span>
+            Save Note
+          </button>
+          <!--Button to cancel edit of note-->
+          <button type = "button" class = "btn" id = "cancel-note-btn">
+            <span><i class = "fas fa-times"></i></span>
+            Cancel Note
+          </button>
+        </div>
+      </div>
+      <!--Empty div to hold notes when created-->
+      <div class = "note-list">
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.5.4/rxjs.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
